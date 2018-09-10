@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #define nGuest 3
 
+/**
+ *Un petit jeu e nombre mon 
+ *choisissez un nombre et tu as 
+ *droit à trois essais.
+ *C'est parti. 
+ * /
+
 int main()
 {
     /*I want to find your secret number between 1 and 10*/
