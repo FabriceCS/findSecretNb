@@ -1,30 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define nGuest 3
+#include "entete.h"
+
 
 int main()
 {
-    /*I want to find your secret number between 1 and 10*/
-    int i=0, halfValue, min=1, max=10, nSecret;
-    char reponse;
+    int unknownNb, debut=1, fin=10, nGuest=3;
+
+    printf("Finding the secret number between %d and %d in %d guests \n", debut, fin, nGuest);
+    unknownNb = findSecretNb(debut, fin, nGuest);
+    printf("That number is : %d\n", unknownNb);
 
 
-    while (i < nGuest) {
-        halfValue = (min+max)/2;
-        printf("Est-il > %d - (o-n) ? \n", halfValue);
-        scanf(" %c", &reponse);
-        if (reponse == 'o') {
-            min = halfValue+1;
-        }
-        else {
-            max = halfValue;
-        }
-        printf("Min = %d, Max = %d \n", min, max);
-        i++;
-    }
-
-    if (reponse == 'n') nSecret = max;
-    else nSecret=min;
-    printf("Le nombre secret c'est %d \n", nSecret);
+    fin=1000;
+    nGuest=10;
+    printf("Finding the secret number between %d and %d in %d guests \n", debut, fin, nGuest);
+    unknownNb = findSecretNb(debut, fin, nGuest);
+    printf("That number is : %d\n",unknownNb);
     return 0;
 }
